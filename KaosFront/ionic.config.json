@@ -1,0 +1,7 @@
+{
+  "name": "KaosFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

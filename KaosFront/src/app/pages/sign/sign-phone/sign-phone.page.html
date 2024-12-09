@@ -1,0 +1,118 @@
+<app-header [backButton]="true"></app-header>
+
+<ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <p class="label-input-sign">Crea tu cuenta con tu número de teléfono</p>
+
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col>
+        <ion-chip
+          id="open-prefix-modal"
+          [outline]="true"
+          color="light"
+          mode="ios"
+        >
+          <ion-img
+            [src]="selectedCountry.flag"
+            width="12"
+            height="10"
+            alt="flag"
+          ></ion-img
+          ><span>{{selectedCountry.dial_code}}</span>
+        </ion-chip>
+      </ion-col>
+      <ion-col size="8" size-md="7">
+        <ion-input
+          [(ngModel)]="user.phone"
+          class="input-sign phone"
+          type="tel"
+          inputmode="tel"
+          autofocus="true"
+          autocomplete="tel"
+          placeholder="Tu teléfono"
+          (ionChange)="validateInput($event)"
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-chip>Default</ion-chip>
+  <ion-chip [disabled]="true">Disabled</ion-chip>
+  <ion-chip [outline]="true">Outline</ion-chip>
+
+  <p class="label-footer-sign">
+    Haciendo click en "Continuar", significa que estás conforme con nuestra
+    <a href="https://www.google.com/">Política de Privacidad</a> y
+    <a href="https://www.google.com/">Terminos de Uso </a>
+  </p>
+  <ion-button
+    mode="ios"
+    class="button-sign"
+    expand="block"
+    color="light"
+    type="submit"
+    (click)="checkUser()"
+    [disabled]="invalidForm"
+    >Continuar</ion-button
+  >
+
+  <ion-modal trigger="open-prefix-modal" mode="ios">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="black">
+          <ion-buttons slot="start">
+            <ion-icon
+              slot="icon-only"
+              name="close-outline"
+              size="small"
+              (click)="cancel()"
+            ></ion-icon>
+          </ion-buttons>
+          <ion-title>Seleccionar pais</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding" color="black" [scrollY]="!scroll">
+        <ion-searchbar
+          [(ngModel)]="searchText"
+          mode="ios"
+          placeholder="Buscar"
+          color="dark"
+          autocomplete="country-name"
+          (ionChange)="inputSearchChange($event)"
+          debounce
+        ></ion-searchbar>
+        <ion-item-group
+          *ngFor="let item of countries | filterCountries:searchText"
+        >
+          <p>{{item.key}}</p>
+          <ion-card>
+            <ion-card-content>
+              <ion-list lines="full">
+                <ion-item
+                  *ngFor="let country of item.countries"
+                  (click)="selectCountry(country.name_es)"
+                  color="dark"
+                >
+                  <ion-img [src]="country.flag" slot="start"></ion-img>
+                  <ion-label
+                    >{{country.name_es}} ({{country.dial_code}})</ion-label
+                  >
+                  <ion-icon
+                    *ngIf="selectedCountry.code_2 == country.code_2 "
+                    slot="end"
+                    name="checkmark-circle-outline"
+                    size="small"
+                  ></ion-icon>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-item-group>
+
+        <app-alphabete-scroll
+          (letterSelected)="scrollToLetter($event)"
+          (scrollingLetter)="scrollActivated($event)"
+        ></app-alphabete-scroll>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

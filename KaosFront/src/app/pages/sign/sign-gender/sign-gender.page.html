@@ -1,0 +1,10 @@
+<app-header [backButton] = "true"></app-header>
+ 
+  <ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <p class="label-input-sign">Hola {{user.name}}, ¿Cuál es tu sexo?</p>
+
+      <ion-input mode="ios" (ionChange)="selectSex($event)" [(ngModel)]="user.gender" autofocus="true" interface="action-sheet" placeholder="Select sex" class="input-sign" (click)="openActionSheet()" readonly></ion-input>
+
+      <ion-button mode="ios"class="button-sign" expand="block" color="light" type="submit" (click)="goDateofbirth()" [disabled]="invalidForm">Continuar</ion-button>
+  
+  </ion-content>

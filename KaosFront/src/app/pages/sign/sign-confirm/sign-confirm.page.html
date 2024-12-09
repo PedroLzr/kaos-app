@@ -1,0 +1,24 @@
+<app-header [backButton]="true"></app-header>
+
+<ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <p class="label-input-sign">
+    Escribe el nuevo código enviado a {{user.phone}}
+  </p>
+
+  <ng-otp-input
+    class="input-sign"
+    (onInputChange)="onOtpChange($event)"
+    [config]="config"
+  ></ng-otp-input>
+
+  <ion-button
+    mode="ios"
+    class="button-sign"
+    expand="block"
+    color="light"
+    type="submit"
+    (click)="goUserName()"
+    [disabled]="invalidForm"
+    >Reenviar en {{seconds}} segundos</ion-button
+  >
+</ion-content>

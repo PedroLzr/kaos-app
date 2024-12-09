@@ -1,0 +1,82 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+/* Sign */
+.input-sign {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  
+.label-input-sign{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.label-footer-sign {
+    position: absolute;
+    bottom: 6%;
+    width: 98%;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+.button-sign {
+    position: absolute;
+    bottom: 1%;
+    width: 99%;
+}
+/**********************************/
+
+/* ActionSheet */
+ion-action-sheet.actionSheet-class {
+    --background: #383a3e;
+    --button-background-selected: #383a3e;
+}
+
+/* Picker */
+ion-action-sheet.picker-class {
+    --background: #383a3e;
+    --button-background-selected: #383a3e;
+}
+
+/*Codigo de confirmacion sms*/
+.otp-input {
+    color: black;
+}
+
+
+/* Quita background del autocomplete*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+    -webkit-text-fill-color: white !important;
+}

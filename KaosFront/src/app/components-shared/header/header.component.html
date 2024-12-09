@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="black">
+    <ion-buttons slot="start" *ngIf="backButton">
+      <ion-back-button defaultHref="/" color="light" text=""> </ion-back-button>
+    </ion-buttons>
+
+    <ion-title> KAOS </ion-title>
+    <ion-buttons *ngIf="profile" slot="primary">
+      <ion-button (click)="openModal()">
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

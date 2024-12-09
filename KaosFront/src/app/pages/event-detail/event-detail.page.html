@@ -1,0 +1,75 @@
+<app-header [backButton]="true"></app-header>
+<ion-content fullscreen scroll-y="false" color="black">
+  <div class="container">
+    <img
+      class="img-container"
+      alt="Silhouette of mountains"
+      src="../../../assets/images/disco1.jpg"
+    />
+
+    <div class="info-event-container">
+      <p class="name-event">Pachá Ibiza</p>
+      <p class="time-event">mié, 30 nov 2022 | 23:00 - 04:00</p>
+      <ion-icon class="location-icon" name="location-outline"></ion-icon>
+      <p class="location-event">Ciudad Real</p>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-item class="people-item" lines="full">
+          <div class="people-container">
+            <ion-item class="man-item" lines="none">
+              <ion-icon name="man"></ion-icon>
+              <ion-label>97</ion-label>
+            </ion-item>
+            <ion-item class="woman-item" lines="none">
+              <ion-icon name="woman"></ion-icon>
+              <ion-label>97</ion-label>
+            </ion-item>
+            <ion-item class="average-date-item" lines="none">
+              <ion-label>Edad media <strong>24</strong></ion-label>
+            </ion-item>
+          </div>
+        </ion-item>
+        <ion-card-subtitle>Quíen va</ion-card-subtitle>
+      </ion-card-header>
+      <ion-list>
+        <ion-item
+          *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]"
+          lines="none"
+        >
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>achece {{item}}</ion-label>
+
+          <ion-button
+            class="like-buttom"
+            (click)="changeLiked()"
+            shape="round"
+            fill="clear"
+            color="danger"
+          >
+            <ion-icon
+              *ngIf="liked"
+              slot="icon-only"
+              name="heart"
+              color="danger"
+            ></ion-icon>
+
+            <ion-icon
+              *ngIf="!liked"
+              slot="icon-only"
+              name="heart-outline"
+              color="black"
+            ></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+
+      <ion-button class="go-button" (click)="onClick()" color="black">
+        VOY!
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

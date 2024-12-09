@@ -1,0 +1,16 @@
+<app-header [backButton] = "true"></app-header>
+ 
+  <ion-content [fullscreen]="true" scroll-y="false" color="black">
+    <div class="content">
+      <p>¿Quien sale de tus amigos esta noche?</p>
+      <ion-card mode="ios" color="black">
+        <ion-card-content>
+          <h2>Por favor enciende las notificaciones</h2>
+          <h6>Te avisaremos de los planes de tus amigos. Descubre quiénes y dónde van a ir y no te quedes fuera.</h6>
+            <ion-button expand="full" class="ion-no-margin" (click)="goHome(true)">Permitir</ion-button>
+            <ion-button expand="full" class="ion-no-margin" color="medium" fill="clear" (click)="goHome(false)">No permitir</ion-button>
+            
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>

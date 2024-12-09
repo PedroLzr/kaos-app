@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <!-- <div class="event">
+    <swiper [effect]="'cards'" [grabCursor]="true" class="swiper">
+      <ng-template swiperSlide *ngFor="let item of [1,1,1,1]">
+          <ion-card button color="light" >
+            <ion-card-header>
+              <ion-card-title>Pachá Ibiza</ion-card-title>
+            </ion-card-header>
+      
+            
+            <img class="image-slide" src="../assets/disco1.jpg" alt="Imagen de la discoteca">
+      
+            <ion-card-content>
+              <ion-buttons>
+                  <ion-icon slot="icon-only" name="woman"></ion-icon>
+                  <ion-label>80</ion-label>
+              </ion-buttons>
+            </ion-card-content>
+            
+          </ion-card>
+      </ng-template>
+    </swiper>
+  </div> -->
+  <p class="label-input-sign">Empecemos, ¿Cuál es tu nombre completo?</p>
+  <ion-input
+    [(ngModel)]="user.fullName"
+    class="input-sign"
+    type="text"
+    inputmode="text"
+    autofocus="true"
+    placeholder="Tu nombre completo"
+    (ionChange)="validateInput($event)"
+  ></ion-input>
+  <ion-button
+    mode="ios"
+    class="button-sign"
+    expand="block"
+    color="light"
+    type="submit"
+    (click)="goGender()"
+    [disabled]="invalidForm"
+    >Continuar</ion-button
+  >
+</ion-content>

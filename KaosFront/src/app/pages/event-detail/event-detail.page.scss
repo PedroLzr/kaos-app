@@ -1,0 +1,125 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    
+}
+
+.container:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,0.9)20%, rgba(255,255,255,0) ,rgba(255,255,255,0) , rgba(0,0,0,0.9)80%);
+}
+
+
+.img-container {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.info-event-container{
+    position: absolute;
+    top: 5px;
+    left: 17px;
+    text-align: left;
+}
+
+.name-event{
+    line-height: 0px;
+    font-size: 30px;
+}
+
+.time-event{
+    line-height: 5px;
+    font-size: 17px;
+    color: gray;
+}
+
+.location-icon{
+    color: #ffc409;
+    font-size: 27px;
+    float: left;
+}
+
+.location-event{
+    line-height: 0px;
+    font-size: 15px;
+    color: #ffc409;
+    float: left;
+}
+
+ion-card {
+    background: rgb(255 255 255 / 81%);
+    position: absolute;
+    margin: 0px;
+    bottom: 54px;
+    width: 100%;
+    height: 60%;
+    border-radius: 0px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+
+    ion-list {
+        background: transparent;
+        overflow: hidden;
+        overflow-y: auto;
+        ::-webkit-scrollbar {
+            display: none;
+        } 
+    }
+
+    ion-card-header {
+        --background: transparent;
+        padding: 0px;
+        padding-bottom: 10px;
+
+        ion-card-subtitle {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+    }
+    ion-item {
+        --background: transparent;
+
+        .like-buttom {
+            --border-radius: 100%
+        }
+    }
+
+
+    .go-button {
+        position: absolute;
+        bottom: 60px;
+        right: 80px;
+        height: 50px;
+        width: 100px;
+    }
+
+}
+
+.people-container{
+
+    .man-item {
+        float: left;
+        position: relative;
+        left: 10%;
+    }
+
+    .woman-item {
+        float: left;
+        position: relative;
+    }
+
+    .average-date-item {
+        position: absolute;
+        right: 10%;
+    }
+}

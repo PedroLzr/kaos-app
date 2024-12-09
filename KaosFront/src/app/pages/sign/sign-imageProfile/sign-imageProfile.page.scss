@@ -1,0 +1,37 @@
+.content {
+    height: 100%;
+    padding-top: 200px;
+
+    ion-avatar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 140px;
+        height: 140px;
+      
+        img {
+          object-fit: cover;
+        }
+      }
+
+    ion-card {
+        margin: 0 auto;
+        width: 150px;
+        height: 100px;
+        border: 1px solid white;
+        border-radius: 20%;
+        text-align: center;
+    
+        ion-icon {
+            font-size: 50px;
+        }
+     }
+
+     p {
+         text-align: center;
+         font-size: 30px;
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+}
+

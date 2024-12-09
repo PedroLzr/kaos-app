@@ -1,0 +1,31 @@
+<app-header [backButton]="true"></app-header>
+
+<ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <div class="content">
+    <ion-avatar *ngIf="user.imageProfile" (click)="openActionSheet()">
+      <img [src]="user.imageProfile | formatBase64" alt="" />
+    </ion-avatar>
+
+    <ion-card
+      *ngIf="!user.imageProfile"
+      mode="ios"
+      color="black"
+      (click)="openActionSheet()"
+    >
+      <ion-card-content>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+    <p>Elige una foto de perfil para que los demás sepan quien eres</p>
+  </div>
+  <ion-button
+    mode="ios"
+    class="button-sign"
+    expand="block"
+    color="light"
+    type="submit"
+    (click)="createUser()"
+    [disabled]="invalidForm"
+    >Continuar</ion-button
+  >
+</ion-content>

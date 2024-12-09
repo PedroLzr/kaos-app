@@ -1,0 +1,50 @@
+.phone {
+    text-align: left;
+  }
+  
+ion-col {
+    display: flex;
+    align-items: center;
+}
+
+ion-chip {
+    position: absolute;
+    right: 0px;
+    border: solid 1px;
+    span {
+        margin-left: 5px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
+
+ion-item-group {
+    p {
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 10px;
+    };
+
+    ion-card {
+        margin-top: 5px;
+        --background: #242323;
+
+        ion-card-content {
+            padding: 0px;
+
+            ion-list {
+                background: #242323;
+            }
+
+            ion-item {
+                font-size: 15px;
+            }
+
+            ion-item:last-child {
+                --border-width: 0 0 0 0;;
+            }
+        }
+        
+    };
+
+}

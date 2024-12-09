@@ -1,0 +1,27 @@
+<app-header [backButton]="true"></app-header>
+
+<ion-content [fullscreen]="true" scroll-y="false" color="black">
+  <p class="label-input-sign">A continuación, introduce tu nombre de usuario</p>
+  <ion-input
+    [(ngModel)]="user.userName"
+    class="input-sign"
+    type="text"
+    inputmode="text"
+    autofocus="true"
+    placeholder="Tu usuario"
+    (ionChange)="validateInput($event)"
+  ></ion-input>
+  <p class="label-footer-sign">
+    Tu nombre de usuario es único y lo podrás cambiar en un futuro
+  </p>
+  <ion-button
+    mode="ios"
+    class="button-sign"
+    expand="block"
+    color="light"
+    type="submit"
+    (click)="goPhone()"
+    [disabled]="invalidForm"
+    >Continuar</ion-button
+  >
+</ion-content>

@@ -1,0 +1,51 @@
+<app-header [profile]="true"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" color="black">
+  <div class="ion-padding-vertical">
+      <ion-avatar class="avatar">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="" class="image-round">
+      </ion-avatar>
+      <div class="ion-text-center fullName">
+        <ion-text>Héctor Céspedes</ion-text>
+        </div>
+        <div class="ion-text-center username">
+            <ion-text>@achece</ion-text>
+        </div>
+      <ion-grid fixed >
+          <ion-row class="ion-align-items-center">
+                <ion-col size="4">
+                    <div class="ion-text-center data-container">
+                            <ion-icon class="gender-icon" name="woman"></ion-icon><br>
+                        <small>Género</small>
+                    </div>
+                </ion-col>
+                <ion-col size="4">
+                    <div class="ion-text-center data-container">
+                        <ion-text class="edad">24</ion-text><br>
+                        <small>Edad</small>
+                    </div>
+                </ion-col>
+                <ion-col size="4">
+                    <div class="ion-text-center data-container">
+                        <img src="https://flagcdn.com/w80/es.png" alt="" width="50"><br>
+                        <small>País</small>
+                    </div>
+                </ion-col>
+          </ion-row>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="12">
+                <div class="ion-text-center data-container">                    
+                    <ion-text class="instagram">@achece</ion-text><br><br>
+                    <ion-icon class="instagram-icon" name="logo-instagram"></ion-icon>
+                </div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <div class="ion-text-center btn-edit">
+          <a>Editar perfil</a>
+          <a class="bookmark">
+              <ion-icon class="icon-mark" name="share-outline"></ion-icon>
+          </a>
+      </div>
+  </div>
+</ion-content>

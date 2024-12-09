@@ -1,0 +1,10 @@
+<app-header></app-header>
+<ion-content fullscreen color="black">
+  <!--<ion-searchbar [(ngModel)]="searchText" mode="ios" placeholder="Buscar" color="dark" debounce slot="fixed"></ion-searchbar>-->
+  <h1 class="top-home-label">¿Dónde se sale hoy?</h1>
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let event of listEvents">
+      <app-event-home [event]="event"></app-event-home>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
